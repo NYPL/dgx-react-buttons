@@ -1,13 +1,30 @@
-NYPL NPM React Boilerplate
+NYPL React Buttons
 
-Quick steps:
+```
+#!javascript
+    // ES6:
+    import React from 'react';
+    import {
+        BasicButton,
+        PaginationButton,
+        SeeMoreButton,
+        SimpleButton
+    } from 'dgx-react-buttons';
+    
+    // Or one
+    import { SeeMoreButton } from 'dgx-react-buttons';
 
-1. Clone this repo
-2. Remove the .git folder
-3. `git init`
-4. Add remote, commit, push, be happy.
+    /*
+     * It's also possible to get the components in this following example,
+     * but the top is more concise
+     */
+    import Buttons from './buttons.js';
+    let BasicButton = Buttons.BasicButton,
+        PaginationButton = Buttons.PaginationButton,
+        SeeMoreButton = Buttons.SeeMoreButton,
+        SimpleButton = Buttons.SimpleButton;
 
-To run:
-
-1. `NODE_ENV=development npm start`
-2. localhost:3000
+    // ES5:
+    var Buttons = require('dgx-react-buttons'),
+        Basicbutton = Buttons.BasicButton;
+```
