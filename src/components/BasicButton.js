@@ -11,7 +11,7 @@ class BasicButton extends React.Component {
   render () {
     return (
       <button
-      ref='BasicButton'
+      ref={this.props.ref}
       id={this.props.id}
       className={this.props.className}
       name={this.props.name}
@@ -34,12 +34,12 @@ BasicButton.defaultProps = {
   name: 'BasicButton',
   label: 'Basic Button',
   lang: 'en',
+  ref: 'BasicButton',
   onClick() {}
 };
 
 const styles = {
-  base: {
-  }
+  base: {}
 };
 
 // Export the component

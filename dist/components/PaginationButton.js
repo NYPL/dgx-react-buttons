@@ -55,7 +55,7 @@ var PaginationButton = (function (_React$Component) {
       return _react2['default'].createElement(
         'div',
         { id: this.props.id,
-          className: this.props.className,
+          className: '' + this.props.className,
           onClick: this.props.onClick },
         _react2['default'].createElement(
           'ul',

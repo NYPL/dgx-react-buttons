@@ -37,7 +37,7 @@ var BasicButton = (function (_React$Component) {
       return _react2['default'].createElement(
         'button',
         {
-          ref: 'BasicButton',
+          ref: this.props.ref,
           id: this.props.id,
           className: this.props.className,
           name: this.props.name,
@@ -61,6 +61,7 @@ BasicButton.defaultProps = {
   name: 'BasicButton',
   label: 'Basic Button',
   lang: 'en',
+  ref: 'BasicButton',
   onClick: function onClick() {}
 };
 

@@ -18,6 +18,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _radium = require('radium');
+
+var _radium2 = _interopRequireDefault(_radium);
+
 var SeeMoreButton = (function (_React$Component) {
   // Constructor used in ES6
 
@@ -32,8 +36,14 @@ var SeeMoreButton = (function (_React$Component) {
   _createClass(SeeMoreButton, [{
     key: 'render',
     value: function render() {
+      var label = this.props.label !== '' ? _react2['default'].createElement(
+        'span',
+        { style: styles.label },
+        this.props.label
+      ) : null;
+
       return _react2['default'].createElement(
-        'div',
+        'a',
         {
           ref: 'SeeMoreButton',
           id: this.props.id,
@@ -41,12 +51,18 @@ var SeeMoreButton = (function (_React$Component) {
           href: this.props.target,
           onClick: this._onClick.bind(this),
           style: [styles.base, this.props.style] },
-        this.props.label
+        _react2['default'].createElement(
+          'span',
+          { style: styles.ellipsis },
+          '...'
+        ),
+        label
       );
     }
   }, {
     key: '_onClick',
-    value: function _onClick() {
+    value: function _onClick(e) {
+      e.preventDefault();
       this.props.onClick();
     }
   }]);
@@ -59,15 +75,34 @@ var SeeMoreButton = (function (_React$Component) {
 SeeMoreButton.defaultProps = {
   id: 'SeeMoreButton',
   className: 'see-more-button',
-  label: 'Button',
+  label: '',
   lang: 'en',
   target: '#',
   onClick: function onClick() {}
 };
 
 var styles = {
-  base: {}
+  base: {
+    textDecoration: 'none',
+    color: '#ED1C24',
+    display: 'inline-block',
+    border: '2px solid #ED1C24',
+    padding: '9px 10px 7px',
+    borderRadius: '28px',
+    fontSize: '12px',
+    boxSizing: 'content-box'
+  },
+  ellipsis: {
+    display: 'block',
+    float: 'left'
+  },
+  label: {
+    display: 'block',
+    float: 'left',
+    fontSize: '16px',
+    marginLeft: '5px'
+  }
 };
 
-exports['default'] = SeeMoreButton;
+exports['default'] = (0, _radium2['default'])(SeeMoreButton);
 module.exports = exports['default'];

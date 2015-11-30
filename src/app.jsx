@@ -6,20 +6,21 @@ import {
   SimpleButton
 } from './buttons.js';
 
-/*
- * It's also possible to get the components in this following example,
- * but the top is more concise
- */
-// import Buttons from './buttons.js';
-// let BasicButton = Buttons.BasicButton,
-//   PaginationButton = Buttons.PaginationButton,
-//   SeeMoreButton = Buttons.SeeMoreButton,
-//   SimpleButton = Buttons.SimpleButton;
+import './styles/styles.scss';
 
-/* app.jsx
+let basic = <BasicButton id='BasicButton-Component'/>,
+  pagination =
+    <PaginationButton id='PaginationButton-Component' isLoading={true} />,
+  seeMore = <SeeMoreButton id='SeeMoreButton-Component' />,
+  seeMoreWithLabel =
+    <SeeMoreButton id='SeeMoreButton-Label-Component' label='See More' />,
+  simple = <SimpleButton id='SimpleButton-Component' />;
+
+/*
  * Used for local development of React Components
  */
-React.render(<BasicButton />, document.getElementById("basic"));
-React.render(<PaginationButton />, document.getElementById("pagination"));
-React.render(<SeeMoreButton />, document.getElementById("seeMore"));
-React.render(<SimpleButton />, document.getElementById("simple"));
+React.render(basic, document.getElementById("basic"));
+React.render(pagination, document.getElementById("pagination"));
+React.render(seeMore, document.getElementById("seeMore"));
+React.render(seeMoreWithLabel, document.getElementById("seeMoreWithLabel"));
+React.render(simple, document.getElementById("simple"));
