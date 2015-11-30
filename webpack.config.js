@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var cleanBuild = require('clean-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 if (process.env.NODE_ENV !== 'development') {
   module.exports = {
@@ -26,6 +27,7 @@ if (process.env.NODE_ENV !== 'development') {
     },
     plugins: [
       new cleanBuild(['dist']),
+      new ExtractTextPlugin('styles.css'),
       new webpack.optimize.UglifyJsPlugin({
         output: {
           comments: false
@@ -47,10 +49,11 @@ if (process.env.NODE_ENV !== 'development') {
     output: {
       path: path.join(__dirname, 'dist'),
       filename: 'index.min.js',
-      publicPath: '/static/'
+      publicPath: '/'
     },
     plugins: [
       new cleanBuild(['dist']),
+      new ExtractTextPlugin('styles.css'),
       new webpack.HotModuleReplacementPlugin()
     ],
     resolve: {
@@ -62,6 +65,11 @@ if (process.env.NODE_ENV !== 'development') {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
           loaders: ['react-hot', 'babel']
+        },
+        {
+          test: /\.scss?$/,
+          loader: 'style!css!sass',
+          include: path.resolve(__dirname, 'src/styles')
         }
       ]
     }
