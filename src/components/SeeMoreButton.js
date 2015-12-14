@@ -23,7 +23,7 @@ class SeeMoreButton extends React.Component {
           styles.base,
           this.props.style
         ]}>
-          <span style={styles.ellipsis}>...</span>
+          <span style={styles.ellipsis} className='nypl-icon-more-dots'></span>
           {label}
       </a>
     );
