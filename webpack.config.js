@@ -14,7 +14,20 @@ if (process.env.NODE_ENV !== 'development') {
     },
     output: {
       path: path.join(__dirname, 'dist'),
-      filename: 'index.min.js'
+      filename: 'index.min.js',
+      // export itself to a UMD require library convention
+      libraryTarget: "umd",
+      // name of the global var
+      library: "dgxReactButtons"
+    },
+    externals: {
+      // Required in order to ignore library within other components
+      'react': {
+        root: 'React',
+        commonjs2: 'react',
+        commonjs: 'react',
+        amd: 'react'
+      }
     },
     module: {
       loaders: [
