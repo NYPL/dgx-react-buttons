@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== 'development') {
   module.exports = {
     devtool: 'source-map',
     entry: [
-      './src/buttons.js'
+      './src/index.jsx'
     ],
     resolve: {
       extensions: ['', '.js', '.jsx']
