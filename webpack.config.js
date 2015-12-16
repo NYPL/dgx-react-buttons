@@ -34,6 +34,15 @@ if (process.env.NODE_ENV !== 'development') {
           query: {
             presets: ['react']
           }
+        },
+        {
+          test: /\.scss$/,
+          include: path.resolve(rootPath, 'src'),
+          loader: ExtractTextPlugin.extract(
+            // activate source maps via loader query
+            'css?sourceMap!' +
+            'sass?sourceMap'
+          )
         }
       ]
     },
