@@ -30,10 +30,7 @@ if (process.env.NODE_ENV !== 'development') {
         {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
-          loaders: ['babel'],
-          query: {
-            presets: ['react']
-          }
+          loaders: ['babel']
         },
         {
           test: /\.scss$/,
