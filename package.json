@@ -5,7 +5,7 @@
   "main": "dist/buttons.js",
   "scripts": {
     "build": "node_modules/.bin/webpack -p --config webpack.config.js",
-    "babel-build": "babel src -d dist && cp -r src/styles dist/styles",
+    "babel-build": "babel src -d dist && cp -r src/styles dist",
     "start": "NODE_ENV=development node server.js"
   },
   "author": "Edwin Guzman <edwinguzman@nypl.org>",
