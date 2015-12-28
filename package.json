@@ -5,7 +5,7 @@
   "main": "dist/buttons.js",
   "scripts": {
     "build": "node_modules/.bin/webpack -p --config webpack.config.js",
-    "babel-build": "babel src -d dist && cp -r src/styles dist/styles",
+    "babel-build": "babel src -d dist && cp -r src/styles dist",
     "start": "NODE_ENV=development node server.js"
   },
   "author": "Edwin Guzman <edwinguzman@nypl.org>",
@@ -28,8 +28,8 @@
   "devDependencies": {
     "babel-core": "^5.8.30",
     "babel-loader": "^5.3.2",
-    "css-loader": "0.14.4",
     "clean-webpack-plugin": "^0.1.3",
+    "css-loader": "0.14.4",
     "extract-text-webpack-plugin": "^0.8.2",
     "node-sass": "^3.2.0",
     "react-hot-loader": "^1.3.0",

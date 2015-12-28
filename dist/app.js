@@ -19,8 +19,8 @@ var basic = _react2['default'].createElement(_buttonsJs.BasicButton, { id: 'Basi
 /*
  * Used for local development of React Components
  */
-_react2['default'].render(basic, document.getElementById('basic'));
-_react2['default'].render(pagination, document.getElementById('pagination'));
-_react2['default'].render(seeMore, document.getElementById('seeMore'));
-_react2['default'].render(seeMoreWithLabel, document.getElementById('seeMoreWithLabel'));
-_react2['default'].render(simple, document.getElementById('simple'));
+_react2['default'].render(basic, document.getElementById("basic"));
+_react2['default'].render(pagination, document.getElementById("pagination"));
+_react2['default'].render(seeMore, document.getElementById("seeMore"));
+_react2['default'].render(seeMoreWithLabel, document.getElementById("seeMoreWithLabel"));
+_react2['default'].render(simple, document.getElementById("simple"));
