@@ -50,7 +50,7 @@ const styles = {
     color: '#ED1C24',
     display: 'inline-block',
     border: '2px solid #ED1C24',
-    padding: '9px 10px 7px',
+    padding: '0',
     borderRadius: '28px',
     fontSize: '36px',
     boxSizing: 'content-box'
