@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== 'development') {
   module.exports = {
     devtool: 'source-map',
     entry: [
-      './src/app.jsx'
+      './src/app.js'
     ],
     resolve: {
       extensions: ['', '.js', '.jsx']
@@ -62,7 +62,7 @@ if (process.env.NODE_ENV !== 'development') {
     entry: [
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
-      './src/app.jsx'
+      './src/app.js'
     ],
     output: {
       path: path.join(__dirname, 'dist'),
