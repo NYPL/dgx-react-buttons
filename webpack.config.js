@@ -7,7 +7,7 @@ if (process.env.NODE_ENV !== 'development') {
   module.exports = {
     devtool: 'source-map',
     entry: [
-      './src/index.jsx'
+      './src/app.js'
     ],
     resolve: {
       extensions: ['', '.js', '.jsx']
@@ -16,12 +16,30 @@ if (process.env.NODE_ENV !== 'development') {
       path: path.join(__dirname, 'dist'),
       filename: 'index.min.js'
     },
+    externals: {
+      // Required in order to ignore library within other components
+      'react': {
+        root: 'React',
+        commonjs2: 'react',
+        commonjs: 'react',
+        amd: 'react'
+      }
+    },
     module: {
       loaders: [
         {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
           loaders: ['babel']
+        },
+        {
+          test: /\.scss$/,
+          include: path.resolve(rootPath, 'src'),
+          loader: ExtractTextPlugin.extract(
+            // activate source maps via loader query
+            'css?sourceMap!' +
+            'sass?sourceMap'
+          )
         }
       ]
     },
@@ -44,7 +62,7 @@ if (process.env.NODE_ENV !== 'development') {
     entry: [
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
-      './src/app.jsx'
+      './src/app.js'
     ],
     output: {
       path: path.join(__dirname, 'dist'),

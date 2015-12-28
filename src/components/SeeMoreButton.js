@@ -23,7 +23,7 @@ class SeeMoreButton extends React.Component {
           styles.base,
           this.props.style
         ]}>
-          <span style={styles.ellipsis}>...</span>
+          <span style={styles.ellipsis} className='nypl-icon-more-dots'></span>
           {label}
       </a>
     );
@@ -52,7 +52,7 @@ const styles = {
     border: '2px solid #ED1C24',
     padding: '9px 10px 7px',
     borderRadius: '28px',
-    fontSize: '12px',
+    fontSize: '36px',
     boxSizing: 'content-box'
   },
   ellipsis: {
@@ -63,7 +63,8 @@ const styles = {
     display: 'block',
     float: 'left',
     fontSize: '16px',
-    marginLeft: '5px'
+    lineHeight: '36px',
+    margin: '0 5px 0 0'
   }
 };
 
