@@ -42,10 +42,11 @@ var PaginationButton = (function (_React$Component) {
       var dotElements = [],
 
       // Add loading class and the loading animation if it is loading now
-      isLoading = (0, _classnames2['default'])({ 'loading': this.props.isLoading }),
-          i = undefined;
+      isLoading = (0, _classnames2['default'])({ loading: this.props.isLoading });
+      var i = undefined;
 
-      // Generate the dots for the pagination button. The number of the dots is determinated by the props.
+      // Generate the dots for the pagination button.
+      // The number of the dots is determinated by the props.
       for (i = 0; i < this.props.dots; i++) {
         dotElements.push(_react2['default'].createElement('li', { id: this.props.id + '__dot-row__element_' + i,
           className: this.props.className + '__dot-row__element ' + isLoading,
@@ -59,11 +60,15 @@ var PaginationButton = (function (_React$Component) {
           onClick: this.props.onClick },
         _react2['default'].createElement(
           'ul',
-          { id: this.props.id + '__dot-row', className: this.props.className + '__dot-row' },
+          {
+            id: this.props.id + '__dot-row',
+            className: this.props.className + '__dot-row' },
           dotElements,
           _react2['default'].createElement(
             'li',
-            { id: this.props.id + '__dot-row__number', className: this.props.className + '__dot-row__number' },
+            {
+              id: this.props.id + '__dot-row__number',
+              className: this.props.className + '__dot-row__number' },
             this.props.label
           )
         )
@@ -74,7 +79,16 @@ var PaginationButton = (function (_React$Component) {
   return PaginationButton;
 })(_react2['default'].Component);
 
-;
+PaginationButton.propTypes = {
+  id: _react2['default'].PropTypes.string.isRequired,
+  className: _react2['default'].PropTypes.string.isRequired,
+  name: _react2['default'].PropTypes.string,
+  label: _react2['default'].PropTypes.string,
+  lang: _react2['default'].PropTypes.string,
+  isLoading: _react2['default'].PropTypes.bool.isRequired,
+  dots: _react2['default'].PropTypes.number,
+  onClick: _react2['default'].PropTypes.func
+};
 
 PaginationButton.defaultProps = {
   id: 'PaginationButton',
@@ -82,8 +96,7 @@ PaginationButton.defaultProps = {
   name: 'pagination button',
   label: 'Pagination Button',
   lang: 'en',
-  dots: 3,
-  onClick: function onClick() {}
+  dots: 3
 };
 
 // Export the component

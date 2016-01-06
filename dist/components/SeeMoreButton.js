@@ -22,61 +22,6 @@ var _radium = require('radium');
 
 var _radium2 = _interopRequireDefault(_radium);
 
-var SeeMoreButton = (function (_React$Component) {
-  _inherits(SeeMoreButton, _React$Component);
-
-  // Constructor used in ES6
-
-  function SeeMoreButton(props) {
-    _classCallCheck(this, SeeMoreButton);
-
-    _get(Object.getPrototypeOf(SeeMoreButton.prototype), 'constructor', this).call(this, props);
-  }
-
-  _createClass(SeeMoreButton, [{
-    key: 'render',
-    value: function render() {
-      var label = this.props.label !== '' ? _react2['default'].createElement(
-        'span',
-        { style: styles.label },
-        this.props.label
-      ) : null;
-
-      return _react2['default'].createElement(
-        'a',
-        {
-          ref: 'SeeMoreButton',
-          id: this.props.id,
-          className: this.props.className,
-          href: this.props.target,
-          onClick: this._onClick.bind(this),
-          style: [styles.base, this.props.style] },
-        _react2['default'].createElement('span', { style: styles.ellipsis, className: 'nypl-icon-more-dots' }),
-        label
-      );
-    }
-  }, {
-    key: '_onClick',
-    value: function _onClick(e) {
-      e.preventDefault();
-      this.props.onClick();
-    }
-  }]);
-
-  return SeeMoreButton;
-})(_react2['default'].Component);
-
-;
-
-SeeMoreButton.defaultProps = {
-  id: 'SeeMoreButton',
-  className: 'see-more-button',
-  label: '',
-  lang: 'en',
-  target: '#',
-  onClick: function onClick() {}
-};
-
 var styles = {
   base: {
     textDecoration: 'none',
@@ -99,6 +44,71 @@ var styles = {
     lineHeight: '36px',
     margin: '0 5px 0 0'
   }
+};
+
+var SeeMoreButton = (function (_React$Component) {
+  _inherits(SeeMoreButton, _React$Component);
+
+  // Constructor used in ES6
+
+  function SeeMoreButton(props) {
+    _classCallCheck(this, SeeMoreButton);
+
+    _get(Object.getPrototypeOf(SeeMoreButton.prototype), 'constructor', this).call(this, props);
+
+    this._onClick = this._onClick.bind(this);
+  }
+
+  _createClass(SeeMoreButton, [{
+    key: '_onClick',
+    value: function _onClick(e) {
+      e.preventDefault();
+      this.props.onClick();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var label = this.props.label !== '' ? _react2['default'].createElement(
+        'span',
+        { style: styles.label },
+        this.props.label
+      ) : null;
+
+      return _react2['default'].createElement(
+        'a',
+        {
+          ref: 'SeeMoreButton',
+          id: this.props.id,
+          className: this.props.className,
+          href: this.props.target,
+          onClick: this._onClick,
+          style: [styles.base, this.props.style] },
+        _react2['default'].createElement('span', { style: styles.ellipsis, className: 'nypl-icon-more-dots' }),
+        label
+      );
+    }
+  }]);
+
+  return SeeMoreButton;
+})(_react2['default'].Component);
+
+SeeMoreButton.propTypes = {
+  id: _react2['default'].PropTypes.string.isRequired,
+  className: _react2['default'].PropTypes.string.isRequired,
+  label: _react2['default'].PropTypes.string,
+  lang: _react2['default'].PropTypes.string,
+  target: _react2['default'].PropTypes.string,
+  style: _react2['default'].PropTypes.object,
+  onClick: _react2['default'].PropTypes.func
+};
+
+SeeMoreButton.defaultProps = {
+  id: 'SeeMoreButton',
+  className: 'see-more-button',
+  label: '',
+  lang: 'en',
+  target: '#',
+  onClick: function onClick() {}
 };
 
 exports['default'] = (0, _radium2['default'])(SeeMoreButton);

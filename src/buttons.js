@@ -7,5 +7,5 @@ export default {
   BasicButton,
   PaginationButton,
   SeeMoreButton,
-  SimpleButton
+  SimpleButton,
 };

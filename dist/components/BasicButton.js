@@ -44,7 +44,7 @@ var BasicButton = (function (_React$Component) {
           onClick: this.props.onClick,
           onMouseEnter: this.props.onMouseEnter,
           onMouseLeave: this.props.onMouseLeave,
-          style: [styles.base, this.props.style] },
+          style: [this.props.style] },
         this.props.label
       );
     }
@@ -53,7 +53,18 @@ var BasicButton = (function (_React$Component) {
   return BasicButton;
 })(_react2['default'].Component);
 
-;
+BasicButton.propTypes = {
+  id: _react2['default'].PropTypes.string.isRequired,
+  className: _react2['default'].PropTypes.string.isRequired,
+  name: _react2['default'].PropTypes.string,
+  label: _react2['default'].PropTypes.string,
+  lang: _react2['default'].PropTypes.string,
+  ref: _react2['default'].PropTypes.string,
+  style: _react2['default'].PropTypes.object,
+  onClick: _react2['default'].PropTypes.func,
+  onMouseLeave: _react2['default'].PropTypes.func,
+  onMouseEnter: _react2['default'].PropTypes.func
+};
 
 BasicButton.defaultProps = {
   id: 'BasicButton',
@@ -61,12 +72,7 @@ BasicButton.defaultProps = {
   name: 'BasicButton',
   label: 'Basic Button',
   lang: 'en',
-  ref: 'BasicButton',
-  onClick: function onClick() {}
-};
-
-var styles = {
-  base: {}
+  ref: 'BasicButton'
 };
 
 // Export the component
