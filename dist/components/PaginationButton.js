@@ -19,11 +19,25 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _radium = require('radium');
+
+var _radium2 = _interopRequireDefault(_radium);
+
 // Misc
 
 var _classnames = require('classnames');
 
 var _classnames2 = _interopRequireDefault(_classnames);
+
+var styles = {
+  base: {
+    color: '#A3A19E',
+    border: '2px solid #A3A19E'
+  },
+  dots: {
+    border: '3px solid #A3A19E'
+  }
+};
 
 var PaginationButton = (function (_React$Component) {
   _inherits(PaginationButton, _React$Component);
@@ -50,14 +64,16 @@ var PaginationButton = (function (_React$Component) {
       for (i = 0; i < this.props.dots; i++) {
         dotElements.push(_react2['default'].createElement('li', { id: this.props.id + '__dot-row__element_' + i,
           className: this.props.className + '__dot-row__element ' + isLoading,
-          key: i }));
+          key: i,
+          style: [styles.dots, this.props.dotStyle] }));
       }
 
       return _react2['default'].createElement(
         'div',
         { id: this.props.id,
           className: '' + this.props.className,
-          onClick: this.props.onClick },
+          onClick: this.props.onClick,
+          style: [styles.base, this.props.style] },
         _react2['default'].createElement(
           'ul',
           {
@@ -100,5 +116,5 @@ PaginationButton.defaultProps = {
 };
 
 // Export the component
-exports['default'] = PaginationButton;
+exports['default'] = (0, _radium2['default'])(PaginationButton);
 module.exports = exports['default'];

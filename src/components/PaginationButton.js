@@ -1,8 +1,19 @@
 // Import React Libraries
 import React from 'react';
+import radium from 'radium';
 
 // Misc
 import cx from 'classnames';
+
+const styles = {
+  base: {
+    color: '#A3A19E',
+    border: '2px solid #A3A19E',
+  },
+  dots: {
+    border: '3px solid #A3A19E',
+  },
+};
 
 class PaginationButton extends React.Component {
   // Constructor used in ES6
@@ -22,7 +33,11 @@ class PaginationButton extends React.Component {
       dotElements.push(
         <li id={`${this.props.id}__dot-row__element_${i}`}
           className={`${this.props.className}__dot-row__element ${isLoading}`}
-          key={i}>
+          key={i}
+          style={[
+            styles.dots,
+            this.props.dotStyle,
+          ]}>
         </li>
       );
     }
@@ -30,7 +45,11 @@ class PaginationButton extends React.Component {
     return (
       <div id={this.props.id}
         className={`${this.props.className}`}
-        onClick={this.props.onClick}>
+        onClick={this.props.onClick}
+        style={[
+          styles.base,
+          this.props.style,
+        ]}>
         <ul
           id={`${this.props.id}__dot-row`}
           className={`${this.props.className}__dot-row`}>
@@ -67,4 +86,4 @@ PaginationButton.defaultProps = {
 };
 
 // Export the component
-export default PaginationButton;
+export default radium(PaginationButton);

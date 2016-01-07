@@ -4,9 +4,9 @@ import radium from 'radium';
 const styles = {
   base: {
     textDecoration: 'none',
-    color: '#ED1C24',
+    color: '#A3A19E',
     display: 'inline-block',
-    border: '2px solid #ED1C24',
+    border: '2px solid #A3A19E',
     padding: '0',
     borderRadius: '28px',
     fontSize: '36px',
