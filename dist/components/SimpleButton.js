@@ -24,6 +24,10 @@ var _radium2 = _interopRequireDefault(_radium);
 
 // import {ga} from 'dgx-react-ga';
 
+var styles = {
+  base: {}
+};
+
 var SimpleButton = (function (_React$Component) {
   _inherits(SimpleButton, _React$Component);
 
@@ -33,9 +37,17 @@ var SimpleButton = (function (_React$Component) {
     _classCallCheck(this, SimpleButton);
 
     _get(Object.getPrototypeOf(SimpleButton.prototype), 'constructor', this).call(this, props);
+
+    this._onClick = this._onClick.bind(this);
   }
 
   _createClass(SimpleButton, [{
+    key: '_onClick',
+    value: function _onClick() {
+      // ga._trackGeneralEvent(this.props.gaCategory, this.props.gaAction, this.props.gaLabel);
+      this.props.onClick();
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2['default'].createElement(
@@ -45,23 +57,25 @@ var SimpleButton = (function (_React$Component) {
           id: this.props.id,
           className: this.props.className,
           href: this.props.target,
-          onClick: this._onClick.bind(this),
+          onClick: this._onClick,
           style: [styles.base, this.props.style] },
         this.props.label
       );
-    }
-  }, {
-    key: '_onClick',
-    value: function _onClick() {
-      // ga._trackGeneralEvent(this.props.gaCategory, this.props.gaAction, this.props.gaLabel);
-      this.props.onClick();
     }
   }]);
 
   return SimpleButton;
 })(_react2['default'].Component);
 
-;
+SimpleButton.propTypes = {
+  id: _react2['default'].PropTypes.string.isRequired,
+  className: _react2['default'].PropTypes.string.isRequired,
+  label: _react2['default'].PropTypes.string,
+  lang: _react2['default'].PropTypes.string,
+  target: _react2['default'].PropTypes.string,
+  style: _react2['default'].PropTypes.object,
+  onClick: _react2['default'].PropTypes.func
+};
 
 SimpleButton.defaultProps = {
   id: 'SimpleButton',
@@ -70,10 +84,6 @@ SimpleButton.defaultProps = {
   lang: 'en',
   target: '#',
   onClick: function onClick() {}
-};
-
-var styles = {
-  base: {}
 };
 
 exports['default'] = (0, _radium2['default'])(SimpleButton);
