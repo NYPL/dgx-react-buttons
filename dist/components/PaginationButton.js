@@ -103,7 +103,9 @@ PaginationButton.propTypes = {
   lang: _react2['default'].PropTypes.string,
   isLoading: _react2['default'].PropTypes.bool.isRequired,
   dots: _react2['default'].PropTypes.number,
-  onClick: _react2['default'].PropTypes.func
+  onClick: _react2['default'].PropTypes.func,
+  style: _react2['default'].PropTypes.object,
+  dotStyle: _react2['default'].PropTypes.object
 };
 
 PaginationButton.defaultProps = {

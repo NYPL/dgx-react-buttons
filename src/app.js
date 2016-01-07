@@ -27,11 +27,11 @@ const isLoading = true,
   pagination =
     <PaginationButton id="PaginationButton-Component" isLoading={isLoading}/>,
   paginationRed =
-    <PaginationButton
+    (<PaginationButton
       id="PaginationButton-Component"
       isLoading={isLoading}
       style={styles.redBorder}
-      dotStyle={styles.redDots} />,
+      dotStyle={styles.redDots} />),
   seeMore = <SeeMoreButton id="SeeMoreBtn" />,
   seeMoreRed = <SeeMoreButton id="SeeMoreBtnRed" style={styles.redBorder} />,
   seeMoreWhite =
@@ -39,10 +39,10 @@ const isLoading = true,
   seeMoreLabel =
     <SeeMoreButton id="SeeMoreBtn-Label-Component" label="See More" />,
   seeMoreRedLabel =
-    <SeeMoreButton
+    (<SeeMoreButton
       id="SeeMoreBtn-Label-Component"
       label="See More"
-      style={styles.redBorder} />,
+      style={styles.redBorder} />),
   simple = <SimpleButton id="SimpleButton-Component" />;
 
 /*

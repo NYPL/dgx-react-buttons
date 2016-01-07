@@ -67,6 +67,8 @@ Available props:
       isLoading: React.PropTypes.bool.isRequired,
       dots: React.PropTypes.number,
       onClick: React.PropTypes.func,
+      style: React.PropTypes.object,
+      dotStyle: React.PropTypes.object,
     };
 
 Usage:
