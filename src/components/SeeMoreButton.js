@@ -23,6 +23,24 @@ const styles = {
     lineHeight: '36px',
     margin: '0 5px 0 0',
   },
+  link: {
+    display: 'inline-block',
+    borderRadius: '13px',
+    width: '22px',
+    height: '22px',
+  },
+  linkBorder: {
+    border: 'solid 2px #A3A19E',
+  },
+  svg: {
+    width: '10px',
+    position: 'relative',
+    left: '5.5px',
+    top: '6px',
+  },
+  svgFill: {
+    fill: '#A3A19E',
+  },
 };
 
 class SeeMoreButton extends React.Component {
@@ -44,19 +62,40 @@ class SeeMoreButton extends React.Component {
       null;
 
     return (
+      //<a
+      //  ref="SeeMoreButton"
+      //  id={this.props.id}
+      //  className={this.props.className}
+      //  href={this.props.target}
+      //  onClick={this._onClick}
+      //  style={[
+      //    styles.base,
+      //    this.props.style,
+      //  ]}>
+      //    <span style={styles.ellipsis} className="nypl-icon-more-dots"></span>
+      //    {label}
+      //</a>
+
       <a
-        ref="SeeMoreButton"
-        id={this.props.id}
-        className={this.props.className}
-        href={this.props.target}
-        onClick={this._onClick}
-        style={[
-          styles.base,
-          this.props.style,
-        ]}>
-          <span style={styles.ellipsis} className="nypl-icon-more-dots"></span>
-          {label}
+	id={this.props.id}
+	className={this.props.className}
+	href={this.props.target}
+	style={[styles.link, styles.linkBorder && {border: 'solid 2px ' + this.props.color}]}
+      >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+	viewBox="0 0 50 50"
+	style={[styles.svg, styles.svgFill && {fill: this.props.color}]}>
+          <circle class="a" cx="4.5" cy="25" r="4.5"/>
+          <circle class="a" cx="25" cy="25" r="4.5"/>
+          <circle class="a" cx="45.5" cy="25" r="4.5"/>
+      </svg>
+	
+      <span className="iconLink-sm-label visuallyHidden">
+	    {this.props.label}
+	</span>
       </a>
+
     );
   }
 }
@@ -74,9 +113,10 @@ SeeMoreButton.propTypes = {
 SeeMoreButton.defaultProps = {
   id: 'SeeMoreButton',
   className: 'see-more-button',
-  label: '',
+  label: 'See More',
   lang: 'en',
   target: '#',
+  color: 'blue',
   onClick() {},
 };
 

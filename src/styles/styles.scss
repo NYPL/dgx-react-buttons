@@ -142,3 +142,11 @@ $COOL_GRAY_REGULAR: #837E77;
   }
 }
 
+.visuallyHidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px; 
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* IE6, IE7 */
+  clip: rect(0, 0, 0, 0);
+} 
