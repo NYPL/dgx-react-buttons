@@ -23,7 +23,7 @@ const styles = {
   },
 };
 
-class SeeMoreButton extends React.Component {
+class SeeMoreLink extends React.Component {
   // Constructor used in ES6
   constructor(props) {
     super(props);
@@ -61,7 +61,7 @@ class SeeMoreButton extends React.Component {
   }
 }
 
-SeeMoreButton.propTypes = {
+SeeMoreLink.propTypes = {
   id: React.PropTypes.string.isRequired,
   className: React.PropTypes.string.isRequired,
   label: React.PropTypes.string,
@@ -71,7 +71,7 @@ SeeMoreButton.propTypes = {
   onClick: React.PropTypes.func,
 };
 
-SeeMoreButton.defaultProps = {
+SeeMoreLink.defaultProps = {
   id: 'SeeMoreButton',
   className: 'seeMorebutton',
   label: 'See More',
@@ -80,4 +80,4 @@ SeeMoreButton.defaultProps = {
   onClick() {},
 };
 
-export default radium(SeeMoreButton);
+export default radium(SeeMoreLink);

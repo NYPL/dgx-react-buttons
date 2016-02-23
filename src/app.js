@@ -2,7 +2,7 @@ import React from 'react';
 import {
   BasicButton,
   PaginationButton,
-  SeeMoreButton,
+  SeeMoreLink,
   SimpleButton,
 } from './buttons.js';
 
@@ -32,14 +32,14 @@ const isLoading = true,
       isLoading={isLoading}
       style={styles.redBorder}
       dotStyle={styles.redDots} />),
-  seeMore = <SeeMoreButton id="SeeMoreBtn" />,
-  seeMoreRed = <SeeMoreButton id="SeeMoreBtnRed" style={styles.redBorder} />,
+  seeMore = <SeeMoreLink id="SeeMoreBtn" />,
+  seeMoreRed = <SeeMoreLink id="SeeMoreBtnRed" style={styles.redBorder} />,
   seeMoreWhite =
-    <SeeMoreButton id="SeeMoreBtnWhite" style={styles.whiteBorder} />,
+    <SeeMoreLink id="SeeMoreBtnWhite" style={styles.whiteBorder} />,
   seeMoreLabel =
-    <SeeMoreButton id="SeeMoreBtn-Label-Component" label="See More" />,
+    <SeeMoreLink id="SeeMoreBtn-Label-Component" label="See More" />,
   seeMoreRedLabel =
-    (<SeeMoreButton
+    (<SeeMoreLink
       id="SeeMoreBtn-Label-Component"
       label="See More"
       style={styles.redBorder} />),
