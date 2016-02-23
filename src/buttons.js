@@ -4,6 +4,7 @@ import SeeMoreLink from './components/SeeMoreLink.js';
 import SimpleButton from './components/SimpleButton.js';
 import IconButton from './components/IconButton.js';
 import CloseButton from './components/CloseButton.js';
+import WedgeRightButton from './components/WedgeRightButton.js';
 
 export default {
   BasicButton,
@@ -12,4 +13,5 @@ export default {
   SimpleButton,
   IconButton,
   CloseButton,
+  WedgeRightButton,
 };
