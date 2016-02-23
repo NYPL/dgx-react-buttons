@@ -39,23 +39,23 @@ class SeeMoreButton extends React.Component {
   render() {
     return (
       <a
-	id={this.props.id}
-	className={this.props.className}
-	href={this.props.target}
-	style={[styles.link]}
+        id={this.props.id}
+        className={this.props.className}
+        href={this.props.target}
+        style={[styles.link]}
       >
         <svg width={10} height={10}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 10 10"
-	  style={[styles.svg]}>
+          style={[styles.svg]}>
           <circle class="a" cx="0.9" cy="5" r="0.9"/>
           <circle class="a" cx="5" cy="5" r="0.9"/>
           <circle class="a" cx="9" cy="5" r="0.9"/>
         </svg>
-	
+        
         <span className="iconLink-sm-label visuallyHidden">
-	  {this.props.label}
-	</span>
+          {this.props.label}
+        </span>
       </a>
 
     );
