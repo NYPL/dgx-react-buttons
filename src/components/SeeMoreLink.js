@@ -2,19 +2,6 @@ import React from 'react';
 import radium from 'radium';
 
 const styles = {
-  label: {
-    display: 'block',
-    float: 'left',
-    fontSize: '16px',
-    lineHeight: '36px',
-    margin: '0 5px 0 0',
-  },
-  link: {
-    display: 'inline-block',
-    borderRadius: '13px',
-    width: '22px',
-    height: '22px',
-  },
   svg: {
     width: '10px',
     position: 'relative',
@@ -40,7 +27,7 @@ class SeeMoreLink extends React.Component {
     return (
       <a
         id={this.props.id}
-        className={this.props.className}
+        className={this.props.className + ' iconButton'}
         href={this.props.target}
         style={[styles.link]}
       >

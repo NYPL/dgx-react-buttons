@@ -167,7 +167,7 @@ $COOL_GRAY_REGULAR: #837E77;
   }
 }
 
-button.iconButton {
+.iconButton {
   padding: 0;
   background: none;
   border: 2px solid $COOL_GRAY_LIGHT;
@@ -176,6 +176,11 @@ button.iconButton {
   width: 22px;
   height: 22px;
   cursor: pointer;
+}
+
+a.iconButton {
+  display: inline-block;
+  border-radius: 13px;
 }
 
 .visuallyHidden {
