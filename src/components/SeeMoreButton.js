@@ -52,7 +52,6 @@ class SeeMoreButton extends React.Component {
           <circle className="a" cx="5" cy="5" r="0.9"/>
           <circle className="a" cx="9" cy="5" r="0.9"/>
         </svg>
-        
         <span className="iconLink-sm-label visuallyHidden">
           {this.props.label}
         </span>
