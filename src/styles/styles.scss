@@ -147,9 +147,21 @@ $COOL_GRAY_REGULAR: #837E77;
     fill: $COOL_GRAY_LIGHT;
 }
 
+#seeMoreScaled {
+  margin-left: 2em;
+  a {
+    transform: scale(2);
+  }
+}
+
+#seeMoreRed .seeMoreButton {
+  border-color: $LIBRARY_RED;
+  fill: $LIBRARY_RED;
+}
+
 #seeMoreWhite {
   padding: 1em 0;
-  .see-more-button {
+  .seeMoreButton {
     border-color: white;
     fill: white;
   }
