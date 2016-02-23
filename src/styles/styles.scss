@@ -142,6 +142,19 @@ $COOL_GRAY_REGULAR: #837E77;
   }
 }
 
+.seeMoreButton {
+    border: 2px solid $COOL_GRAY_LIGHT;
+    fill: $COOL_GRAY_LIGHT;
+}
+
+#seeMoreWhite {
+  padding: 1em 0;
+  .see-more-button {
+    border-color: white;
+    fill: white;
+  }
+}
+
 .visuallyHidden {
   position: absolute !important;
   height: 1px;

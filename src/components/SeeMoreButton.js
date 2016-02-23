@@ -2,20 +2,6 @@ import React from 'react';
 import radium from 'radium';
 
 const styles = {
-  base: {
-    textDecoration: 'none',
-    color: '#A3A19E',
-    display: 'inline-block',
-    border: '2px solid #A3A19E',
-    padding: '0',
-    borderRadius: '28px',
-    fontSize: '36px',
-    boxSizing: 'content-box',
-  },
-  ellipsis: {
-    display: 'block',
-    float: 'left',
-  },
   label: {
     display: 'block',
     float: 'left',
@@ -29,17 +15,11 @@ const styles = {
     width: '22px',
     height: '22px',
   },
-  linkBorder: {
-    border: 'solid 2px #A3A19E',
-  },
   svg: {
     width: '10px',
     position: 'relative',
     left: '5.5px',
     top: '6px',
-  },
-  svgFill: {
-    fill: '#A3A19E',
   },
 };
 
@@ -57,42 +37,24 @@ class SeeMoreButton extends React.Component {
   }
 
   render() {
-    const label = (this.props.label !== '') ?
-      <span style={styles.label}>{this.props.label}</span> :
-      null;
-
     return (
-      //<a
-      //  ref="SeeMoreButton"
-      //  id={this.props.id}
-      //  className={this.props.className}
-      //  href={this.props.target}
-      //  onClick={this._onClick}
-      //  style={[
-      //    styles.base,
-      //    this.props.style,
-      //  ]}>
-      //    <span style={styles.ellipsis} className="nypl-icon-more-dots"></span>
-      //    {label}
-      //</a>
-
       <a
 	id={this.props.id}
 	className={this.props.className}
 	href={this.props.target}
-	style={[styles.link, styles.linkBorder && {border: 'solid 2px ' + this.props.color}]}
+	style={[styles.link]}
       >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-	viewBox="0 0 50 50"
-	style={[styles.svg, styles.svgFill && {fill: this.props.color}]}>
-          <circle class="a" cx="4.5" cy="25" r="4.5"/>
-          <circle class="a" cx="25" cy="25" r="4.5"/>
-          <circle class="a" cx="45.5" cy="25" r="4.5"/>
-      </svg>
+        <svg width={10} height={10}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 10 10"
+	  style={[styles.svg]}>
+          <circle class="a" cx="0.9" cy="5" r="0.9"/>
+          <circle class="a" cx="5" cy="5" r="0.9"/>
+          <circle class="a" cx="9" cy="5" r="0.9"/>
+        </svg>
 	
-      <span className="iconLink-sm-label visuallyHidden">
-	    {this.props.label}
+        <span className="iconLink-sm-label visuallyHidden">
+	  {this.props.label}
 	</span>
       </a>
 
@@ -112,11 +74,10 @@ SeeMoreButton.propTypes = {
 
 SeeMoreButton.defaultProps = {
   id: 'SeeMoreButton',
-  className: 'see-more-button',
+  className: 'seeMorebutton',
   label: 'See More',
   lang: 'en',
   target: '#',
-  color: 'blue',
   onClick() {},
 };
 
