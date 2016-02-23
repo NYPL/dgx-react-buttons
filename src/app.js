@@ -4,6 +4,8 @@ import {
   PaginationButton,
   SeeMoreLink,
   SimpleButton,
+  IconButton,
+  CloseButton,
 } from './buttons.js';
 
 import './styles/styles.scss';
@@ -21,6 +23,8 @@ const styles = {
     border: '3px solid #ED1C24',
   },
 };
+
+const closeClick = function () { alert('Close!'); };
 
 const isLoading = true,
   basic = <BasicButton id="BasicButton-Component"/>,
@@ -43,7 +47,8 @@ const isLoading = true,
       id="SeeMoreBtn-Label-Component"
       label="See More"
       style={styles.redBorder} />),
-  simple = <SimpleButton id="SimpleButton-Component" />;
+  simple = <SimpleButton id="SimpleButton-Component" />,
+  icon = <CloseButton onClick={closeClick}/>;
 
 /*
  * Used for local development of React Components
@@ -58,3 +63,4 @@ React.render(seeMoreWhite, document.getElementById('seeMoreWhite'));
 React.render(seeMoreLabel, document.getElementById('seeMoreLabel'));
 React.render(seeMoreRedLabel, document.getElementById('seeMoreRedLabel'));
 React.render(simple, document.getElementById('simple'));
+React.render(icon, document.getElementById('icon'));

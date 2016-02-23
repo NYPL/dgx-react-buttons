@@ -73,7 +73,7 @@ SeeMoreLink.propTypes = {
 
 SeeMoreLink.defaultProps = {
   id: 'SeeMoreButton',
-  className: 'seeMorebutton',
+  className: 'seeMoreButton',
   label: 'See More',
   lang: 'en',
   target: '#',

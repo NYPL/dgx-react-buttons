@@ -1,0 +1,39 @@
+import React from 'react';
+
+class IconButton extends React.Component {
+  constructor(props) {
+    super(props);
+    this._onClick = this._onClick.bind(this);
+  }
+
+  _onClick(e) {
+    e.preventDefault();
+    this.props.onClick();
+  }
+
+  render() {
+    return (
+      <button
+        className={this.props.className + ' iconButton'}
+	onClick={this._onClick}
+      >
+      {this.props.icon}
+      </button>
+    );
+  }
+}
+
+IconButton.propTypes = {
+  icon: React.PropTypes.object.isRequired,
+  id: React.PropTypes.string.isRequired,
+  className: React.PropTypes.string.isRequired,
+  label: React.PropTypes.string,
+  lang: React.PropTypes.string,
+};
+
+IconButton.defaultProps = {
+  className: 'iconButton',
+  lang: 'en',
+};
+
+export default IconButton;
