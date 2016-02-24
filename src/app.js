@@ -26,7 +26,9 @@ const styles = {
   },
 };
 
-const closeClick = function () { alert('Close!'); };
+const closeClick = function () { console.log('Close!'); };
+const leftClick = function () { console.log('Left!'); };
+const rightClick = function () { console.log('Right!'); };
 
 const isLoading = true,
   basic = <BasicButton id="BasicButton-Component"/>,
@@ -51,8 +53,8 @@ const isLoading = true,
       style={styles.redBorder} />),
   simple = <SimpleButton id="SimpleButton-Component" />,
   icon = <CloseButton onClick={closeClick}/>,
-  wedgeRight = <WedgeRightButton onClick={closeClick}/>,
-  wedgeLeft = <WedgeLeftButton onClick={closeClick}/>;
+  wedgeRight = <WedgeRightButton onClick={rightClick}/>,
+  wedgeLeft = <WedgeLeftButton onClick={leftClick}/>;
 
 /*
  * Used for local development of React Components
