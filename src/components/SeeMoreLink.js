@@ -27,7 +27,7 @@ class SeeMoreLink extends React.Component {
     return (
       <a
         id={this.props.id}
-        className={this.props.className + ' iconButton'}
+        className={this.props.className + ' btn__icon'}
         href={this.props.target}
         style={[styles.link]}
       >

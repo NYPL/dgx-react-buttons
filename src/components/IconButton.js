@@ -14,7 +14,7 @@ class IconButton extends React.Component {
   render() {
     return (
       <button
-        className={this.props.className + ' iconButton'}
+        className={this.props.className + ' btn__icon'}
 	onClick={this._onClick}
       >
       {this.props.icon}
@@ -32,7 +32,7 @@ IconButton.propTypes = {
 };
 
 IconButton.defaultProps = {
-  className: 'iconButton',
+  className: 'btn__icon',
   lang: 'en',
 };
 

@@ -167,7 +167,7 @@ $COOL_GRAY_REGULAR: #837E77;
   }
 }
 
-.iconButton {
+.btn__icon {
   padding: 0;
   background: none;
   border: 2px solid $COOL_GRAY_LIGHT;
@@ -178,7 +178,7 @@ $COOL_GRAY_REGULAR: #837E77;
   cursor: pointer;
 }
 
-a.iconButton {
+a.btn__icon {
   display: inline-block;
   border-radius: 13px;
 }
