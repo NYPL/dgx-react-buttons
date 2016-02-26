@@ -1,5 +1,13 @@
 import React from 'react';
+import radium from 'radium';
 import IconButton from './IconButton.js';
+
+const styles = {
+  circle: {
+    strokeWidth: '3px',
+    fill: 'none',
+  },
+};
 
 class WedgeLeftButton extends React.Component {
   constructor(props) {
@@ -10,11 +18,12 @@ class WedgeLeftButton extends React.Component {
     const icon = (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 50 50"
-        height={10}
-        width={10}
+	viewBox="0 0 50 50"
+	height="25"
+	width="25"
       >
-        <polygon points="35.16 50 10.11 24.94 35.16 0 39.89 4.61 19.44 24.94 39.89 45.39 35.16 50"/>
+        <circle cx="25" cy="25" r="23.4" style={[styles.circle]} />
+	<polygon points="27.55 36.19 16.36 25.01 27.55 13.82 29.63 15.9 20.52 25.01 29.63 34.11 27.55 36.19"/>
       </svg>
     );
 
@@ -40,4 +49,4 @@ WedgeLeftButton.defaultProps = {
   lang: 'en',
 };
 
-export default WedgeLeftButton;
+export default radium(WedgeLeftButton);

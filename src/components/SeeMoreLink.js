@@ -3,10 +3,14 @@ import radium from 'radium';
 
 const styles = {
   svg: {
-    width: '10px',
-    position: 'relative',
-    left: '5.5px',
-    top: '6px',
+//    width: '10px',
+//    position: 'relative',
+//    left: '5.5px',
+//    top: '6px',
+  },
+  circle: {
+    strokeWidth: '3px',
+    fill: 'none',
   },
 };
 
@@ -31,14 +35,14 @@ class SeeMoreLink extends React.Component {
         href={this.props.target}
         style={[styles.link]}
       >
-        <svg width={10} height={10}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 10 10"
-          style={[styles.svg]}>
-          <circle className="a" cx="0.9" cy="5" r="0.9"/>
-          <circle className="a" cx="5" cy="5" r="0.9"/>
-          <circle className="a" cx="9" cy="5" r="0.9"/>
-        </svg>
+
+    <svg viewBox="0 0 50 50" height="25" width="25">
+        <circle cx="25" cy="25" r="23.4" style={[styles.circle]} />
+      <circle cx="15.5" cy="25" r="2.5" />
+      <circle cx="25" cy="25" r="2.5" />
+      <circle cx="34.5" cy="25" r="2.5" />
+    </svg>
+
         <span className="iconLink-sm-label visuallyHidden">
           {this.props.label}
         </span>
