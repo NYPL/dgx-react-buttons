@@ -142,3 +142,65 @@ $COOL_GRAY_REGULAR: #837E77;
   }
 }
 
+.seeMoreButton {
+    border: 2px solid $COOL_GRAY_LIGHT;
+    fill: $COOL_GRAY_LIGHT;
+}
+
+#seeMoreSized {
+  margin-left: 20px;
+  svg {
+    height: 44px;
+    width: 44px;
+  }
+}
+
+#seeMoreScaled {
+  margin-left: 20px;
+  svg {
+    transform: scale(2);
+  }
+}
+
+#seeMoreRed .seeMoreButton {
+  border-color: $LIBRARY_RED;
+  fill: $LIBRARY_RED;
+  stroke: $LIBRARY_RED;
+}
+
+#seeMoreWhite {
+  padding: 1em 0;
+  .seeMoreButton {
+    border-color: white;
+    fill: white;
+    stroke: white;
+  }
+}
+
+.btn__icon {
+  padding: 0;
+  background: none;
+  border: none;
+  fill: $COOL_GRAY_LIGHT;
+  stroke: $COOL_GRAY_LIGHT;
+  cursor: pointer;
+
+  svg {
+      width: 22px;
+      height: 22px;
+  }
+}
+
+a.btn__icon {
+//  display: inline-block;
+//  border-radius: 13px;
+}
+
+.visuallyHidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px; 
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* IE6, IE7 */
+  clip: rect(0, 0, 0, 0);
+} 
