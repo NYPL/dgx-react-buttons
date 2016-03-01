@@ -147,9 +147,17 @@ $COOL_GRAY_REGULAR: #837E77;
     fill: $COOL_GRAY_LIGHT;
 }
 
+#seeMoreSized {
+  margin-left: 20px;
+  svg {
+    height: 44px;
+    width: 44px;
+  }
+}
+
 #seeMoreScaled {
-  margin-left: 2em;
-  a {
+  margin-left: 20px;
+  svg {
     transform: scale(2);
   }
 }

@@ -63,6 +63,7 @@ React.render(basic, document.getElementById('basic'));
 React.render(pagination, document.getElementById('pagination'));
 React.render(paginationRed, document.getElementById('paginationRed'));
 React.render(seeMore, document.getElementById('seeMore'));
+React.render(seeMore, document.getElementById('seeMoreSized'));
 React.render(seeMore, document.getElementById('seeMoreScaled'));
 React.render(seeMoreRed, document.getElementById('seeMoreRed'));
 React.render(seeMoreWhite, document.getElementById('seeMoreWhite'));
