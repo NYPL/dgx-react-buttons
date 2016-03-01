@@ -1,6 +1,6 @@
 {
   "name": "dgx-react-buttons",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "NPM React Boilerplate",
   "main": "dist/buttons.js",
   "scripts": {
