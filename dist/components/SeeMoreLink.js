@@ -23,43 +23,32 @@ var _radium = require('radium');
 var _radium2 = _interopRequireDefault(_radium);
 
 var styles = {
-  base: {
-    textDecoration: 'none',
-    color: '#A3A19E',
-    display: 'inline-block',
-    border: '2px solid #A3A19E',
-    padding: '0',
-    borderRadius: '28px',
-    fontSize: '36px',
-    boxSizing: 'content-box'
+  svg: {
+    //    width: '10px',
+    //    position: 'relative',
+    //    left: '5.5px',
+    //    top: '6px',
   },
-  ellipsis: {
-    display: 'block',
-    float: 'left'
-  },
-  label: {
-    display: 'block',
-    float: 'left',
-    fontSize: '16px',
-    lineHeight: '36px',
-    margin: '0 5px 0 0'
+  circle: {
+    strokeWidth: '3px',
+    fill: 'none'
   }
 };
 
-var SeeMoreButton = (function (_React$Component) {
-  _inherits(SeeMoreButton, _React$Component);
+var SeeMoreLink = (function (_React$Component) {
+  _inherits(SeeMoreLink, _React$Component);
 
   // Constructor used in ES6
 
-  function SeeMoreButton(props) {
-    _classCallCheck(this, SeeMoreButton);
+  function SeeMoreLink(props) {
+    _classCallCheck(this, SeeMoreLink);
 
-    _get(Object.getPrototypeOf(SeeMoreButton.prototype), 'constructor', this).call(this, props);
+    _get(Object.getPrototypeOf(SeeMoreLink.prototype), 'constructor', this).call(this, props);
 
     this._onClick = this._onClick.bind(this);
   }
 
-  _createClass(SeeMoreButton, [{
+  _createClass(SeeMoreLink, [{
     key: '_onClick',
     value: function _onClick(e) {
       e.preventDefault();
@@ -68,31 +57,35 @@ var SeeMoreButton = (function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var label = this.props.label !== '' ? _react2['default'].createElement(
-        'span',
-        { style: styles.label },
-        this.props.label
-      ) : null;
-
       return _react2['default'].createElement(
         'a',
         {
-          ref: 'SeeMoreButton',
           id: this.props.id,
-          className: this.props.className,
+          className: this.props.className + ' btn__icon',
           href: this.props.target,
-          onClick: this._onClick,
-          style: [styles.base, this.props.style] },
-        _react2['default'].createElement('span', { style: styles.ellipsis, className: 'nypl-icon-more-dots' }),
-        label
+          style: [styles.link]
+        },
+        _react2['default'].createElement(
+          'svg',
+          { viewBox: '0 0 50 50', height: '25', width: '25' },
+          _react2['default'].createElement('circle', { cx: '25', cy: '25', r: '23.4', style: [styles.circle] }),
+          _react2['default'].createElement('circle', { cx: '15.5', cy: '25', r: '2.5' }),
+          _react2['default'].createElement('circle', { cx: '25', cy: '25', r: '2.5' }),
+          _react2['default'].createElement('circle', { cx: '34.5', cy: '25', r: '2.5' })
+        ),
+        _react2['default'].createElement(
+          'span',
+          { className: 'iconLink-sm-label visuallyHidden' },
+          this.props.label
+        )
       );
     }
   }]);
 
-  return SeeMoreButton;
+  return SeeMoreLink;
 })(_react2['default'].Component);
 
-SeeMoreButton.propTypes = {
+SeeMoreLink.propTypes = {
   id: _react2['default'].PropTypes.string.isRequired,
   className: _react2['default'].PropTypes.string.isRequired,
   label: _react2['default'].PropTypes.string,
@@ -102,14 +95,14 @@ SeeMoreButton.propTypes = {
   onClick: _react2['default'].PropTypes.func
 };
 
-SeeMoreButton.defaultProps = {
+SeeMoreLink.defaultProps = {
   id: 'SeeMoreButton',
-  className: 'see-more-button',
-  label: '',
+  className: 'seeMoreButton',
+  label: 'See More',
   lang: 'en',
   target: '#',
   onClick: function onClick() {}
 };
 
-exports['default'] = (0, _radium2['default'])(SeeMoreButton);
+exports['default'] = (0, _radium2['default'])(SeeMoreLink);
 module.exports = exports['default'];
