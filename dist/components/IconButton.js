@@ -40,7 +40,7 @@ var IconButton = (function (_React$Component) {
       return _react2['default'].createElement(
         'button',
         {
-          className: this.props.className + ' btn__icon',
+          className: this.props.className + ' svgIcon',
           onClick: this._onClick
         },
         this.props.icon
@@ -60,7 +60,7 @@ IconButton.propTypes = {
 };
 
 IconButton.defaultProps = {
-  className: 'btn__icon',
+  className: '',
   lang: 'en'
 };
 

@@ -17,7 +17,7 @@ class SeeMoreLink extends React.Component {
     return (
       <a
         id={this.props.id}
-        className={`${this.props.defaultClass} ${this.props.className}`}
+        className={`${this.props.defaultClass} ${this.props.className} svgIcon`}
         href={this.props.target}
         style={[styles.link]}
       >
@@ -27,7 +27,7 @@ class SeeMoreLink extends React.Component {
           <circle cx="25" cy="25" r="2.5" />
           <circle cx="34.5" cy="25" r="2.5" />
         </svg>
-        <span className={`${this.props.defaultClass}-label visuallyHidden`}>
+        <span className={'label visuallyHidden'}>
           {this.props.label}
         </span>
       </a>
@@ -46,7 +46,7 @@ SeeMoreLink.propTypes = {
 };
 
 SeeMoreLink.defaultProps = {
-  id: 'SeeMoreLink',
+  id: 'seeMoreLink',
   className: '',
   defaultClass: 'seeMoreLink',
   label: 'See More',

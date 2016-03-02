@@ -95,7 +95,7 @@ $COOL_GRAY_REGULAR: #837E77;
   }
 }
 
-/* 
+/*
  * PAGINATION BUTTON LOADING ANIMATION
  * ---------------------
  * Usage: The animation for the loader
@@ -177,7 +177,7 @@ $COOL_GRAY_REGULAR: #837E77;
   }
 }
 
-.btn__icon {
+.svgIcon {
   padding: 0;
   background: none;
   border: none;
@@ -186,21 +186,16 @@ $COOL_GRAY_REGULAR: #837E77;
   cursor: pointer;
 
   svg {
-      width: 22px;
-      height: 22px;
+    width: 22px;
+    height: 22px;
   }
-}
-
-a.btn__icon {
-//  display: inline-block;
-//  border-radius: 13px;
 }
 
 .visuallyHidden {
   position: absolute !important;
   height: 1px;
-  width: 1px; 
+  width: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0); /* IE6, IE7 */
   clip: rect(0, 0, 0, 0);
-} 
+}

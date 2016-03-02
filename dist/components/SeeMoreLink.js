@@ -45,7 +45,7 @@ var SeeMoreLink = (function (_React$Component) {
         'a',
         {
           id: this.props.id,
-          className: this.props.defaultClass + ' ' + this.props.className,
+          className: this.props.defaultClass + ' ' + this.props.className + ' svgIcon',
           href: this.props.target,
           style: [styles.link]
         },
@@ -59,7 +59,7 @@ var SeeMoreLink = (function (_React$Component) {
         ),
         _react2['default'].createElement(
           'span',
-          { className: this.props.defaultClass + '-label visuallyHidden' },
+          { className: 'label visuallyHidden' },
           this.props.label
         )
       );
@@ -80,7 +80,7 @@ SeeMoreLink.propTypes = {
 };
 
 SeeMoreLink.defaultProps = {
-  id: 'SeeMoreLink',
+  id: 'seeMoreLink',
   className: '',
   defaultClass: 'seeMoreLink',
   label: 'See More',
