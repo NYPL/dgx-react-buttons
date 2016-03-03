@@ -40,7 +40,7 @@ const isLoading = true,
       isLoading={isLoading}
       style={styles.redBorder}
       dotStyle={styles.redDots} />),
-  seeMore = <SeeMoreLink id="SeeMoreBtn" />,
+  seeMore = <SeeMoreLink id="seeMoreLink" />,
   seeMoreRed = <SeeMoreLink id="SeeMoreBtnRed" style={styles.redBorder} />,
   seeMoreWhite =
     <SeeMoreLink id="SeeMoreBtnWhite" style={styles.whiteBorder} />,

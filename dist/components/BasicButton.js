@@ -67,8 +67,8 @@ BasicButton.propTypes = {
 };
 
 BasicButton.defaultProps = {
-  id: 'BasicButton',
-  className: 'BasicButton',
+  id: 'basicButton',
+  className: 'basicButton',
   name: 'BasicButton',
   label: 'Basic Button',
   lang: 'en',

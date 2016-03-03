@@ -18,19 +18,19 @@ class WedgeLeftButton extends React.Component {
     const icon = (
       <svg
         xmlns="http://www.w3.org/2000/svg"
-	viewBox="0 0 50 50"
-	height="25"
-	width="25"
+        viewBox="0 0 50 50"
+        height="25"
+        width="25"
       >
         <circle cx="25" cy="25" r="23.4" style={[styles.circle]} />
-	<polygon points="27.55 36.19 16.36 25.01 27.55 13.82 29.63 15.9 20.52 25.01 29.63 34.11 27.55 36.19"/>
+        <polygon points="27.55 36.19 16.36 25.01 27.55 13.82 29.63 15.9 20.52 25.01 29.63 34.11 27.55 36.19" />
       </svg>
     );
 
     return (
       <IconButton
         {...this.props}
-	icon={icon}
+        icon={icon}
       />
     );
   }
