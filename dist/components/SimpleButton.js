@@ -22,16 +22,12 @@ var _radium = require('radium');
 
 var _radium2 = _interopRequireDefault(_radium);
 
-// import {ga} from 'dgx-react-ga';
-
 var styles = {
   base: {}
 };
 
 var SimpleButton = (function (_React$Component) {
   _inherits(SimpleButton, _React$Component);
-
-  // Constructor used in ES6
 
   function SimpleButton(props) {
     _classCallCheck(this, SimpleButton);
@@ -44,7 +40,6 @@ var SimpleButton = (function (_React$Component) {
   _createClass(SimpleButton, [{
     key: '_onClick',
     value: function _onClick() {
-      // ga._trackGeneralEvent(this.props.gaCategory, this.props.gaAction, this.props.gaLabel);
       this.props.onClick();
     }
   }, {
@@ -78,8 +73,8 @@ SimpleButton.propTypes = {
 };
 
 SimpleButton.defaultProps = {
-  id: 'SimpleButton',
-  className: 'SimpleButton',
+  id: 'simpleButton',
+  className: 'simpleButton',
   label: 'Button',
   lang: 'en',
   target: '#',

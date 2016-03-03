@@ -23,12 +23,6 @@ var _radium = require('radium');
 var _radium2 = _interopRequireDefault(_radium);
 
 var styles = {
-  svg: {
-    //    width: '10px',
-    //    position: 'relative',
-    //    left: '5.5px',
-    //    top: '6px',
-  },
   circle: {
     strokeWidth: '3px',
     fill: 'none'
@@ -38,30 +32,20 @@ var styles = {
 var SeeMoreLink = (function (_React$Component) {
   _inherits(SeeMoreLink, _React$Component);
 
-  // Constructor used in ES6
-
   function SeeMoreLink(props) {
     _classCallCheck(this, SeeMoreLink);
 
     _get(Object.getPrototypeOf(SeeMoreLink.prototype), 'constructor', this).call(this, props);
-
-    this._onClick = this._onClick.bind(this);
   }
 
   _createClass(SeeMoreLink, [{
-    key: '_onClick',
-    value: function _onClick(e) {
-      e.preventDefault();
-      this.props.onClick();
-    }
-  }, {
     key: 'render',
     value: function render() {
       return _react2['default'].createElement(
         'a',
         {
           id: this.props.id,
-          className: this.props.className + ' btn__icon',
+          className: this.props.defaultClass + ' ' + this.props.className + ' svgIcon',
           href: this.props.target,
           style: [styles.link]
         },
@@ -75,7 +59,7 @@ var SeeMoreLink = (function (_React$Component) {
         ),
         _react2['default'].createElement(
           'span',
-          { className: 'iconLink-sm-label visuallyHidden' },
+          { className: 'label visuallyHidden' },
           this.props.label
         )
       );
@@ -88,20 +72,20 @@ var SeeMoreLink = (function (_React$Component) {
 SeeMoreLink.propTypes = {
   id: _react2['default'].PropTypes.string.isRequired,
   className: _react2['default'].PropTypes.string.isRequired,
+  defaultClass: _react2['default'].PropTypes.string,
   label: _react2['default'].PropTypes.string,
   lang: _react2['default'].PropTypes.string,
   target: _react2['default'].PropTypes.string,
-  style: _react2['default'].PropTypes.object,
-  onClick: _react2['default'].PropTypes.func
+  style: _react2['default'].PropTypes.object
 };
 
 SeeMoreLink.defaultProps = {
-  id: 'SeeMoreButton',
-  className: 'seeMoreButton',
+  id: 'seeMoreLink',
+  className: '',
+  defaultClass: 'seeMoreLink',
   label: 'See More',
   lang: 'en',
-  target: '#',
-  onClick: function onClick() {}
+  target: '#'
 };
 
 exports['default'] = (0, _radium2['default'])(SeeMoreLink);

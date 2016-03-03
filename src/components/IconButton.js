@@ -14,10 +14,10 @@ class IconButton extends React.Component {
   render() {
     return (
       <button
-        className={this.props.className + ' btn__icon'}
-	onClick={this._onClick}
+        className={`${this.props.className} svgIcon`}
+	      onClick={this._onClick}
       >
-      {this.props.icon}
+        {this.props.icon}
       </button>
     );
   }
@@ -32,7 +32,7 @@ IconButton.propTypes = {
 };
 
 IconButton.defaultProps = {
-  className: 'btn__icon',
+  className: '',
   lang: 'en',
 };
 

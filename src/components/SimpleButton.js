@@ -1,14 +1,11 @@
 import React from 'react';
 import radium from 'radium';
 
-// import {ga} from 'dgx-react-ga';
-
 const styles = {
   base: {},
 };
 
 class SimpleButton extends React.Component {
-  // Constructor used in ES6
   constructor(props) {
     super(props);
 
@@ -16,14 +13,13 @@ class SimpleButton extends React.Component {
   }
 
   _onClick() {
-    // ga._trackGeneralEvent(this.props.gaCategory, this.props.gaAction, this.props.gaLabel);
     this.props.onClick();
   }
 
   render() {
     return (
       <a
-        ref="SimpleButton"
+        ref='SimpleButton'
         id={this.props.id}
         className={this.props.className}
         href={this.props.target}
@@ -49,8 +45,8 @@ SimpleButton.propTypes = {
 };
 
 SimpleButton.defaultProps = {
-  id: 'SimpleButton',
-  className: 'SimpleButton',
+  id: 'simpleButton',
+  className: 'simpleButton',
   label: 'Button',
   lang: 'en',
   target: '#',
