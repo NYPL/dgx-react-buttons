@@ -1,5 +1,5 @@
 import React from 'react';
-import IconButton from './IconButton.js';
+import IconButton from './IconButton';
 
 class CloseButton extends React.Component {
   constructor(props) {

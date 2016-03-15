@@ -2,9 +2,6 @@
 import React from 'react';
 import radium from 'radium';
 
-// Misc
-import cx from 'classnames';
-
 const styles = {
   base: {
     color: '#A3A19E',
@@ -16,7 +13,6 @@ const styles = {
 };
 
 class PaginationButton extends React.Component {
-  // Constructor used in ES6
   constructor(props) {
     super(props);
   }
@@ -24,7 +20,7 @@ class PaginationButton extends React.Component {
   render() {
     const dotElements = [],
       // Add loading class and the loading animation if it is loading now
-      isLoading = cx({ loading: this.props.isLoading });
+      isLoading = this.props.isLoading ? 'loading': '';
     let i;
 
     // Generate the dots for the pagination button.

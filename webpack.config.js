@@ -2,19 +2,24 @@ var path = require('path');
 var webpack = require('webpack');
 var cleanBuild = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var rootPath = path.resolve(__dirname);
 
 if (process.env.NODE_ENV !== 'development') {
   module.exports = {
     devtool: 'source-map',
-    entry: [
-      './src/app.js'
-    ],
+    entry: {
+      'dgx-react-buttons': [
+        path.resolve(rootPath, 'src/buttons.jsx')
+      ]
+    },
     resolve: {
       extensions: ['', '.js', '.jsx']
     },
     output: {
       path: path.join(__dirname, 'dist'),
-      filename: 'index.min.js'
+      filename: 'index.min.js',
+      libraryTarget: "umd",
+      library: "dgxReactButtons"
     },
     externals: {
       // Required in order to ignore library within other components
@@ -30,22 +35,15 @@ if (process.env.NODE_ENV !== 'development') {
         {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
-          loaders: ['babel']
-        },
-        {
-          test: /\.scss$/,
-          include: path.resolve(rootPath, 'src'),
-          loader: ExtractTextPlugin.extract(
-            // activate source maps via loader query
-            'css?sourceMap!' +
-            'sass?sourceMap'
-          )
+          loader: 'babel',
+          query: {
+            presets: ['react', 'es2015']
+          }
         }
       ]
     },
     plugins: [
       new cleanBuild(['dist']),
-      new ExtractTextPlugin('styles.css'),
       new webpack.optimize.UglifyJsPlugin({
         output: {
           comments: false
@@ -62,7 +60,7 @@ if (process.env.NODE_ENV !== 'development') {
     entry: [
       'webpack-dev-server/client?http://localhost:3000',
       'webpack/hot/only-dev-server',
-      './src/app.js'
+      './src/app.jsx'
     ],
     output: {
       path: path.join(__dirname, 'dist'),
@@ -82,7 +80,10 @@ if (process.env.NODE_ENV !== 'development') {
         {
           test: /\.jsx?$/,
           exclude: /(node_modules|bower_components)/,
-          loaders: ['react-hot', 'babel']
+          loader: 'babel',
+          query: {
+            presets: ['react', 'es2015']
+          }
         },
         {
           test: /\.scss?$/,
