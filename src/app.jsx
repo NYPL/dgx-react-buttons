@@ -8,7 +8,7 @@ import {
   CloseButton,
   WedgeRightButton,
   WedgeLeftButton,
-} from './buttons.js';
+} from './buttons';
 
 import './styles/styles.scss';
 
@@ -31,7 +31,7 @@ const leftClick = function () { console.log('Left!'); };
 const rightClick = function () { console.log('Right!'); };
 
 const isLoading = true,
-  basic = <BasicButton id="BasicButton-Component"/>,
+  basic = <BasicButton id="BasicButton-Component" />,
   pagination =
     <PaginationButton id="PaginationButton-Component" isLoading={isLoading}/>,
   paginationRed =
@@ -52,7 +52,7 @@ const isLoading = true,
       label="See More"
       style={styles.redBorder} />),
   simple = <SimpleButton id="SimpleButton-Component" />,
-  icon = <CloseButton onClick={closeClick}/>,
+  icon = <CloseButton id="CloseButton-Component" onClick={closeClick}/>,
   wedgeRight = <WedgeRightButton onClick={rightClick}/>,
   wedgeLeft = <WedgeLeftButton onClick={leftClick}/>;
 
