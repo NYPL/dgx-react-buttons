@@ -18,7 +18,7 @@ class BasicButton extends React.Component {
         style={[this.props.style]}
       >
         {this.props.icon}
-        {this.props.label}
+        <span>{this.props.label}</span>
       </button>
     );
   }
