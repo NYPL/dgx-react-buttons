@@ -17,8 +17,8 @@ class BasicButton extends React.Component {
         onMouseLeave={this.props.onMouseLeave}
         style={[this.props.style]}
       >
-        {this.props.label}
         {this.props.icon}
+        {this.props.label}
       </button>
     );
   }
