@@ -9,7 +9,18 @@ $COOL_GRAY_REGULAR: #837E77;
 /*
  * Basic Button
  */
+#basicButtonWithSvgIcon {
+  background-color: transparent;
+  border: 1px solid #CCC;
 
+  span {
+    display: block;
+  }
+
+  svg {
+  text-align: center;
+  }
+}
 /*
  * Pagination Button
  */
