@@ -1,9 +1,6 @@
-// The button component that doesn't activate any link, only interaction and submission
-// Import React libraries
 import React from 'react';
 
 class BasicButton extends React.Component {
-  // Constructor used in ES6
   constructor(props) {
     super(props);
   }
@@ -18,10 +15,10 @@ class BasicButton extends React.Component {
         onClick={this.props.onClick}
         onMouseEnter={this.props.onMouseEnter}
         onMouseLeave={this.props.onMouseLeave}
-        style={[
-          this.props.style,
-        ]}>
-        {this.props.label}
+        style={[this.props.style]}
+      >
+        {this.props.icon}
+        <span>{this.props.label}</span>
       </button>
     );
   }
@@ -35,6 +32,7 @@ BasicButton.propTypes = {
   lang: React.PropTypes.string,
   ref: React.PropTypes.string,
   style: React.PropTypes.object,
+  icon: React.PropTypes.object,
   onClick: React.PropTypes.func,
   onMouseLeave: React.PropTypes.func,
   onMouseEnter: React.PropTypes.func,
@@ -49,5 +47,4 @@ BasicButton.defaultProps = {
   ref: 'BasicButton',
 };
 
-// Export the component
 export default BasicButton;

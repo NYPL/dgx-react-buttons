@@ -1,4 +1,5 @@
 import React from 'react';
+import { CarouselCircleIcon } from 'dgx-svg-icons';
 import {
   BasicButton,
   PaginationButton,
@@ -32,6 +33,8 @@ const rightClick = function () { console.log('Right!'); };
 
 const isLoading = true,
   basic = <BasicButton id="BasicButton-Component" />,
+  basicButtonWithSvgIcon =
+    <BasicButton id="basicButtonWithSvgIcon" icon={<CarouselCircleIcon type="solid" />} />,
   pagination =
     <PaginationButton id="PaginationButton-Component" isLoading={isLoading}/>,
   paginationRed =
@@ -60,6 +63,7 @@ const isLoading = true,
  * Used for local development of React Components
  */
 React.render(basic, document.getElementById('basic'));
+React.render(basicButtonWithSvgIcon, document.getElementById('basicWithSvgIcon'));
 React.render(pagination, document.getElementById('pagination'));
 React.render(paginationRed, document.getElementById('paginationRed'));
 React.render(seeMore, document.getElementById('seeMore'));
