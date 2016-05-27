@@ -1,36 +1,42 @@
 import React from 'react';
 
-class BasicButton extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <button
-        ref={this.props.ref}
-        id={this.props.id}
-        className={this.props.className}
-        name={this.props.name}
-        onClick={this.props.onClick}
-        onMouseEnter={this.props.onMouseEnter}
-        onMouseLeave={this.props.onMouseLeave}
-        style={[this.props.style]}
-      >
-        {this.props.icon}
-        <span>{this.props.label}</span>
-      </button>
-    );
-  }
-}
+const BasicButton = ({
+  id,
+  className,
+  name,
+  style,
+  label,
+  icon,
+  labelAccessible,
+  onClick,
+  onMouseEnter,
+  onMouseLeave,
+}) => (
+  <button
+    id={id}
+    className={className}
+    name={name}
+    style={style}
+    onClick={onClick}
+    onMouseEnter={onMouseEnter}
+    onMouseLeave={onMouseLeave}
+  >
+    {icon}
+    <span
+      className={(labelAccessible) ? 'visuallyHidden' : null}
+    >
+      {label}
+    </span>
+  </button>
+);
 
 BasicButton.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string.isRequired,
+  id: React.PropTypes.string,
+  className: React.PropTypes.string,
   name: React.PropTypes.string,
   label: React.PropTypes.string,
   lang: React.PropTypes.string,
-  ref: React.PropTypes.string,
+  labelAccessible: React.PropTypes.bool,
   style: React.PropTypes.object,
   icon: React.PropTypes.object,
   onClick: React.PropTypes.func,
@@ -39,12 +45,10 @@ BasicButton.propTypes = {
 };
 
 BasicButton.defaultProps = {
-  id: 'basicButton',
   className: 'basicButton',
-  name: 'BasicButton',
   label: 'Basic Button',
   lang: 'en',
-  ref: 'BasicButton',
+  labelAccessible: false,
 };
 
 export default BasicButton;

@@ -1,15 +1,14 @@
 import React from 'react';
+import { render } from 'react-dom';
 import { CarouselCircleIcon } from 'dgx-svg-icons';
 import {
   BasicButton,
   PaginationButton,
   SeeMoreLink,
-  SimpleButton,
-  IconButton,
   CloseButton,
   WedgeRightButton,
   WedgeLeftButton,
-} from './buttons';
+} from './buttons.jsx';
 
 import './styles/styles.scss';
 
@@ -27,53 +26,75 @@ const styles = {
   },
 };
 
-const closeClick = function () { console.log('Close!'); };
-const leftClick = function () { console.log('Left!'); };
-const rightClick = function () { console.log('Right!'); };
+const closeClick = () => { console.log('Close!'); };
+const leftClick = () => { console.log('Left!'); };
+const rightClick = () => { console.log('Right!'); };
 
-const isLoading = true,
-  basic = <BasicButton id="BasicButton-Component" />,
-  basicButtonWithSvgIcon =
-    <BasicButton id="basicButtonWithSvgIcon" icon={<CarouselCircleIcon type="solid" />} />,
-  pagination =
-    <PaginationButton id="PaginationButton-Component" isLoading={isLoading}/>,
-  paginationRed =
-    (<PaginationButton
-      id="PaginationButton-Component"
-      isLoading={isLoading}
-      style={styles.redBorder}
-      dotStyle={styles.redDots} />),
-  seeMore = <SeeMoreLink id="seeMoreLink" />,
-  seeMoreRed = <SeeMoreLink id="SeeMoreBtnRed" style={styles.redBorder} />,
-  seeMoreWhite =
-    <SeeMoreLink id="SeeMoreBtnWhite" style={styles.whiteBorder} />,
-  seeMoreLabel =
-    <SeeMoreLink id="SeeMoreBtn-Label-Component" label="See More" />,
-  seeMoreRedLabel =
-    (<SeeMoreLink
-      id="SeeMoreBtn-Label-Component"
-      label="See More"
-      style={styles.redBorder} />),
-  simple = <SimpleButton id="SimpleButton-Component" />,
-  icon = <CloseButton id="CloseButton-Component" onClick={closeClick}/>,
-  wedgeRight = <WedgeRightButton onClick={rightClick}/>,
-  wedgeLeft = <WedgeLeftButton onClick={leftClick}/>;
 
-/*
- * Used for local development of React Components
- */
-React.render(basic, document.getElementById('basic'));
-React.render(basicButtonWithSvgIcon, document.getElementById('basicWithSvgIcon'));
-React.render(pagination, document.getElementById('pagination'));
-React.render(paginationRed, document.getElementById('paginationRed'));
-React.render(seeMore, document.getElementById('seeMore'));
-React.render(seeMore, document.getElementById('seeMoreSized'));
-React.render(seeMore, document.getElementById('seeMoreScaled'));
-React.render(seeMoreRed, document.getElementById('seeMoreRed'));
-React.render(seeMoreWhite, document.getElementById('seeMoreWhite'));
-React.render(seeMoreLabel, document.getElementById('seeMoreLabel'));
-React.render(seeMoreRedLabel, document.getElementById('seeMoreRedLabel'));
-React.render(simple, document.getElementById('simple'));
-React.render(icon, document.getElementById('icon'));
-React.render(wedgeRight, document.getElementById('wedgeRight'));
-React.render(wedgeLeft, document.getElementById('wedgeLeft'));
+// BasicButton
+render(<BasicButton />, document.getElementById('basic'));
+
+// BasicButton with SVG Icon and hidden label by boolean
+render(
+  <BasicButton labelAccessible icon={<CarouselCircleIcon type="solid" />} />,
+  document.getElementById('basicAccessible')
+);
+
+// BasicButton with SVG icon
+render(
+  <BasicButton icon={<CarouselCircleIcon type="solid" />} />,
+  document.getElementById('basicWithSvgIcon')
+);
+
+// PaginationButton with Loading boolean set to true
+render(
+  <PaginationButton isLoading />,
+  document.getElementById('pagination')
+);
+
+// Red PaginationButton with Loading boolean set to true
+render(
+  <PaginationButton isLoading style={styles.redBorder} dotStyle={styles.redDots} />,
+  document.getElementById('paginationRed')
+);
+
+// SeeMore Links with Resize
+render(<SeeMoreLink id="seeMoreLink" />, document.getElementById('seeMore'));
+render(<SeeMoreLink id="seeMoreLink" />, document.getElementById('seeMoreSized'));
+render(<SeeMoreLink id="seeMoreLink" />, document.getElementById('seeMoreScaled'));
+
+// SeeMoreLink with red border
+render(
+  <SeeMoreLink id="SeeMoreBtnRed" style={styles.redBorder} />,
+  document.getElementById('seeMoreRed')
+);
+
+// SeeMoreLink with white border
+render(
+  <SeeMoreLink id="SeeMoreBtnWhite" style={styles.whiteBorder} />,
+  document.getElementById('seeMoreWhite')
+);
+
+// SeeMoreLink with label
+render(
+  <SeeMoreLink id="SeeMoreBtn-Label-Component" label="See More" />,
+  document.getElementById('seeMoreLabel')
+);
+
+// SeeMoreLink with red label
+render(
+  <SeeMoreLink id="SeeMoreBtn-Label-Component" label="See More" style={styles.redBorder} />,
+  document.getElementById('seeMoreRedLabel')
+);
+
+// CloseButton
+render(
+  <CloseButton id="CloseButton-Component" onClick={closeClick} />,
+  document.getElementById('icon')
+);
+
+// wedgeRight
+render(<WedgeRightButton onClick={rightClick} />, document.getElementById('wedgeRight'));
+
+// wedgeLeft
+render(<WedgeLeftButton onClick={leftClick} />, document.getElementById('wedgeLeft'));

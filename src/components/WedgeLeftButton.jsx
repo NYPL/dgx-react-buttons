@@ -37,8 +37,8 @@ class WedgeLeftButton extends React.Component {
 }
 
 WedgeLeftButton.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string.isRequired,
+  id: React.PropTypes.string,
+  className: React.PropTypes.string,
   label: React.PropTypes.string,
   lang: React.PropTypes.string,
   onClick: React.PropTypes.func.isRequired,
