@@ -27,7 +27,7 @@ class SeeMoreLink extends React.Component {
           <circle cx="25" cy="25" r="2.5" />
           <circle cx="34.5" cy="25" r="2.5" />
         </svg>
-        <span className={'label visuallyHidden'}>
+        <span className="label visuallyHidden">
           {this.props.label}
         </span>
       </a>
