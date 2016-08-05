@@ -39,7 +39,7 @@ class PaginationButton extends React.Component {
     }
 
     return (
-      <div id={this.props.id}
+      <button id={this.props.id}
         className={`${this.props.className}`}
         onClick={this.props.onClick}
         style={[
@@ -56,7 +56,7 @@ class PaginationButton extends React.Component {
             {this.props.label}
           </li>
         </ul>
-      </div>
+      </button>
     );
   }
 }
