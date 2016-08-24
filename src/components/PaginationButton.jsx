@@ -33,12 +33,12 @@ const PaginationButton = (props) => {
         className={`${props.className}__dot-row`}
       >
         {dotElements}
-        <label
+        <span
           id={`${props.id}__dot-row__number`}
           className={`${props.className}__dot-row__number`}
         >
           {props.label}
-        </label>
+        </span>
       </span>
     </button>
   );
