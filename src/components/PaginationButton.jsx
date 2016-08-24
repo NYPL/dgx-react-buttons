@@ -12,8 +12,7 @@ const PaginationButton = (props) => {
   for (i = 0; i < props.dots; i++) {
     dotElements.push(
       <span
-        id={`${props.id}__dot-row__element_${i}`}
-        className={`${props.className}__dot-row__element ${isLoading}`}
+        className={`${props.className}-dotRow-element ${isLoading}`}
         key={i}
         style={props.dotStyle}
       >
@@ -23,19 +22,16 @@ const PaginationButton = (props) => {
 
   return (
     <button
-      id={props.id}
       className={`${props.className}`}
       onClick={props.onClick}
       style={props.style}
     >
       <span
-        id={`${props.id}__dot-row`}
-        className={`${props.className}__dot-row`}
+        className={`${props.className}-dotRow`}
       >
         {dotElements}
         <span
-          id={`${props.id}__dot-row__number`}
-          className={`${props.className}__dot-row__number`}
+          className={`${props.className}-dotRow-number`}
         >
           {props.label}
         </span>
@@ -45,12 +41,11 @@ const PaginationButton = (props) => {
 };
 
 PaginationButton.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string.isRequired,
+  className: React.PropTypes.string,
   name: React.PropTypes.string,
   label: React.PropTypes.string,
   lang: React.PropTypes.string,
-  isLoading: React.PropTypes.bool.isRequired,
+  isLoading: React.PropTypes.bool,
   dots: React.PropTypes.number,
   onClick: React.PropTypes.func,
   style: React.PropTypes.object,
@@ -58,8 +53,7 @@ PaginationButton.propTypes = {
 };
 
 PaginationButton.defaultProps = {
-  id: 'PaginationButton',
-  className: 'pagination-button',
+  className: 'paginationButton',
   name: 'pagination button',
   label: 'Pagination Button',
   lang: 'en',
