@@ -14,7 +14,6 @@ const PaginationButton = (props) => {
       <span
         className={`${props.className}-dotRow-dot ${isLoading}`}
         key={i}
-        // style={props.dotStyle}
       >
       </span>
     );
@@ -24,7 +23,6 @@ const PaginationButton = (props) => {
     <button
       className={`${props.className}`}
       onClick={props.onClick}
-      // style={props.style}
     >
       <span
         className={`${props.className}-dotRow`}
@@ -58,13 +56,6 @@ PaginationButton.defaultProps = {
   label: 'Pagination Button',
   lang: 'en',
   dots: 3,
-  style: {
-    color: '#A3A19E',
-    border: '2px solid #A3A19E',
-  },
-  dotStyle: {
-    border: '3px solid #A3A19E',
-  },
 };
 
 // Export the component

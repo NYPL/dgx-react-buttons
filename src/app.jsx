@@ -21,9 +21,6 @@ const styles = {
     color: '#ED1C24',
     border: '2px solid #ED1C24',
   },
-  redDots: {
-    border: '3px solid #ED1C24',
-  },
 };
 
 const closeClick = () => { console.log('Close!'); };
@@ -51,12 +48,6 @@ render(
   <PaginationButton isLoading />,
   document.getElementById('pagination')
 );
-
-// Red PaginationButton with Loading boolean set to true
-// render(
-//   <PaginationButton isLoading style={styles.redBorder} dotStyle={styles.redDots} />,
-//   document.getElementById('paginationRed')
-// );
 
 // SeeMore Links with Resize
 render(<SeeMoreLink id="seeMoreLink" />, document.getElementById('seeMore'));
