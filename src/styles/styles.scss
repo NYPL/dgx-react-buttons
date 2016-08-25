@@ -29,7 +29,9 @@ $COOL_GRAY_REGULAR: #837E77;
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
+  border: 2px solid #A3A19E;
   border-radius: 33px;
+  color: #A3A19E;
   cursor: pointer;
   display: inline-block;
   font-family: Kievit-Medium;
@@ -44,6 +46,7 @@ $COOL_GRAY_REGULAR: #837E77;
     margin: 0 auto;
     padding: 0;
     &__element {
+      border: 3px solid #A3A19E;
       border-radius: 100%;
       display: inline-block;
       margin: 0 4px 0 0;

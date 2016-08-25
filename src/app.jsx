@@ -53,10 +53,10 @@ render(
 );
 
 // Red PaginationButton with Loading boolean set to true
-render(
-  <PaginationButton isLoading style={styles.redBorder} dotStyle={styles.redDots} />,
-  document.getElementById('paginationRed')
-);
+// render(
+//   <PaginationButton isLoading style={styles.redBorder} dotStyle={styles.redDots} />,
+//   document.getElementById('paginationRed')
+// );
 
 // SeeMore Links with Resize
 render(<SeeMoreLink id="seeMoreLink" />, document.getElementById('seeMore'));

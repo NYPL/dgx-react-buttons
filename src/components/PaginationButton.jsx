@@ -15,7 +15,7 @@ const PaginationButton = (props) => {
         id={`${props.id}__dot-row__element_${i}`}
         className={`${props.className}__dot-row__element ${isLoading}`}
         key={i}
-        style={props.dotStyle}
+        // style={props.dotStyle}
       >
       </span>
     );
@@ -26,7 +26,7 @@ const PaginationButton = (props) => {
       id={props.id}
       className={`${props.className}`}
       onClick={props.onClick}
-      style={props.style}
+      // style={props.style}
     >
       <span
         id={`${props.id}__dot-row`}
