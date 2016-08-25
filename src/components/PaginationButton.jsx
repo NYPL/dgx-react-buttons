@@ -12,7 +12,7 @@ const PaginationButton = (props) => {
   for (i = 0; i < props.dots; i++) {
     dotElements.push(
       <span
-        className={`${props.className}-dotRow-element ${isLoading}`}
+        className={`${props.className}-dotRow-dot ${isLoading}`}
         key={i}
         style={props.dotStyle}
       >
