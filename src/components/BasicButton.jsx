@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const BasicButton = ({
   id,
@@ -31,17 +32,17 @@ const BasicButton = ({
 );
 
 BasicButton.propTypes = {
-  id: React.PropTypes.string,
-  className: React.PropTypes.string,
-  name: React.PropTypes.string,
-  label: React.PropTypes.string,
-  lang: React.PropTypes.string,
-  labelAccessible: React.PropTypes.bool,
-  style: React.PropTypes.object,
-  icon: React.PropTypes.object,
-  onClick: React.PropTypes.func,
-  onMouseLeave: React.PropTypes.func,
-  onMouseEnter: React.PropTypes.func,
+  id: PropTypes.string,
+  className: PropTypes.string,
+  name: PropTypes.string,
+  label: PropTypes.string,
+  lang: PropTypes.string,
+  labelAccessible: PropTypes.bool,
+  style: PropTypes.object,
+  icon: PropTypes.object,
+  onClick: PropTypes.func,
+  onMouseLeave: PropTypes.func,
+  onMouseEnter: PropTypes.func,
 };
 
 BasicButton.defaultProps = {
