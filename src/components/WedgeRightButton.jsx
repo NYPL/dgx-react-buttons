@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import radium from 'radium';
 import IconButton from './IconButton';
 
@@ -37,11 +38,11 @@ class WedgeRightButton extends React.Component {
 }
 
 WedgeRightButton.propTypes = {
-  id: React.PropTypes.string,
-  className: React.PropTypes.string,
-  label: React.PropTypes.string,
-  lang: React.PropTypes.string,
-  onClick: React.PropTypes.func.isRequired,
+  id: PropTypes.string,
+  className: PropTypes.string,
+  label: PropTypes.string,
+  lang: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
 WedgeRightButton.defaultProps = {
