@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class IconButton extends React.Component {
   constructor(props) {
@@ -24,11 +25,11 @@ class IconButton extends React.Component {
 }
 
 IconButton.propTypes = {
-  icon: React.PropTypes.object.isRequired,
-  id: React.PropTypes.string,
-  className: React.PropTypes.string,
-  label: React.PropTypes.string,
-  lang: React.PropTypes.string,
+  icon: PropTypes.object.isRequired,
+  id: PropTypes.string,
+  className: PropTypes.string,
+  label: PropTypes.string,
+  lang: PropTypes.string,
 };
 
 IconButton.defaultProps = {

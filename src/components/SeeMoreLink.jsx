@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import radium from 'radium';
 
 const styles = {
@@ -36,13 +37,13 @@ class SeeMoreLink extends React.Component {
 }
 
 SeeMoreLink.propTypes = {
-  id: React.PropTypes.string.isRequired,
-  className: React.PropTypes.string.isRequired,
-  defaultClass: React.PropTypes.string,
-  label: React.PropTypes.string,
-  lang: React.PropTypes.string,
-  target: React.PropTypes.string,
-  style: React.PropTypes.object,
+  id: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  defaultClass: PropTypes.string,
+  label: PropTypes.string,
+  lang: PropTypes.string,
+  target: PropTypes.string,
+  style: PropTypes.object,
 };
 
 SeeMoreLink.defaultProps = {
