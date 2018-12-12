@@ -12,6 +12,7 @@ const BasicButton = ({
   onClick,
   onMouseEnter,
   onMouseLeave,
+  iconSide,
 }) => (
   <button
     id={id}
@@ -22,12 +23,13 @@ const BasicButton = ({
     onMouseEnter={onMouseEnter}
     onMouseLeave={onMouseLeave}
   >
-    {icon}
+    {iconSide === 'left' ? icon : ''}
     <span
       className={(labelAccessible) ? 'visuallyHidden' : null}
     >
       {label}
     </span>
+    {iconSide === 'right' ? icon : ''}
   </button>
 );
 
@@ -43,6 +45,7 @@ BasicButton.propTypes = {
   onClick: PropTypes.func,
   onMouseLeave: PropTypes.func,
   onMouseEnter: PropTypes.func,
+  iconSide: PropTypes.string,
 };
 
 BasicButton.defaultProps = {
@@ -50,6 +53,7 @@ BasicButton.defaultProps = {
   label: 'Basic Button',
   lang: 'en',
   labelAccessible: false,
+  iconSide: 'left',
 };
 
 export default BasicButton;

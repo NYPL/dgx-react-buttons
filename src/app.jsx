@@ -37,10 +37,16 @@ render(
   document.getElementById('basicAccessible')
 );
 
-// BasicButton with SVG icon
+// BasicButton with SVG icon on Left
 render(
   <BasicButton icon={<CarouselCircleIcon type="solid" />} />,
-  document.getElementById('basicWithSvgIcon')
+  document.getElementById('basicWithSvgIconLeft')
+);
+
+// BasicButton with SVG icon on Right
+render(
+  <BasicButton icon={<CarouselCircleIcon type="solid" />} iconSide='right' />,
+  document.getElementById('basicWithSvgIconRight')
 );
 
 // PaginationButton with Loading boolean set to true
