@@ -1,6 +1,6 @@
 {
   "name": "dgx-react-buttons",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React DGX Buttons",
   "main": "dist/index.min.js",
   "scripts": {
