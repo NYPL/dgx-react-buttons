@@ -2,6 +2,9 @@
 
 Different button components used in the dgx React apps.
 
+## Version
+0.1.1
+
 ## Usage
 Require dgx-react-buttons as a dependency in your package.json file, pointing to the `master` branch.
 
