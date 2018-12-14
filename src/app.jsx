@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { CarouselCircleIcon } from 'dgx-svg-icons';
+import { CarouselCircleIcon } from '@nypl/dgx-svg-icons';
 import {
   BasicButton,
   PaginationButton,
