@@ -1,10 +1,10 @@
-import BasicButton from './components/BasicButton.jsx';
-import PaginationButton from './components/PaginationButton.jsx';
-import SeeMoreLink from './components/SeeMoreLink.jsx';
-import IconButton from './components/IconButton.jsx';
-import CloseButton from './components/CloseButton.jsx';
-import WedgeRightButton from './components/WedgeRightButton.jsx';
-import WedgeLeftButton from './components/WedgeLeftButton.jsx';
+import BasicButton from './components/BasicButton';
+import PaginationButton from './components/PaginationButton';
+import SeeMoreLink from './components/SeeMoreLink';
+import IconButton from './components/IconButton';
+import CloseButton from './components/CloseButton';
+import WedgeRightButton from './components/WedgeRightButton';
+import WedgeLeftButton from './components/WedgeLeftButton';
 
 export {
   BasicButton,
