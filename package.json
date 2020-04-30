@@ -1,6 +1,6 @@
 {
   "name": "dgx-react-buttons",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "React DGX Buttons",
   "main": "dist/index.min.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "url": "https://bitbucket.org/NYPL/dgx-react-buttons/issues"
   },
   "dependencies": {
-    "radium": "0.19.1"
+    "radium": "0.25.2"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
