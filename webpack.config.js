@@ -21,7 +21,7 @@ if (process.env.NODE_ENV !== 'development') {
       filename: 'index.min.js',
       libraryTarget: "umd",
       library: "dgxReactButtons",
-      globalObject: "this"
+      globalObject: "window"
     },
     externals: {
       // Required in order to ignore library within other components
