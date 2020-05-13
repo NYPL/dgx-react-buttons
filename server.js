@@ -1,7 +1,7 @@
-var webpack = require('webpack'),
-  WebpackDevServer = require('webpack-dev-server'),
-  config = require('./webpack.config'),
-  pkg = require('./package.json');
+const webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const config = require('./webpack.config');
+const pkg = require('./package.json');
 
 new WebpackDevServer(webpack(config), {
   publicPath: config.output.publicPath,

@@ -1,5 +1,8 @@
 ### CHANGE LOG
 
+#### v0.1.2
+> Upgrade vulnerable packages including Babel and Webpack
+
 #### v0.1.1
 > Adding iconSide to the BasicButton component
 

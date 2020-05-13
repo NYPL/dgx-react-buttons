@@ -19,7 +19,7 @@ Require dgx-react-buttons as a dependency in your package.json file, pointing to
         SeeMoreButton,
         SimpleButton
     } from 'dgx-react-buttons';
-    
+
     // Or just import a specific button
     import { SeeMoreButton } from 'dgx-react-buttons';
 
@@ -51,7 +51,7 @@ Available props:
       onClick: React.PropTypes.func,
       onMouseLeave: React.PropTypes.func,
       onMouseEnter: React.PropTypes.func,
-    };        
+    };
 
 Usage:
 
@@ -137,3 +137,13 @@ Usage:
         $ npm start
 
 Check localhost:3000.
+
+### Contributing to this repo
+* Create a feature branch from `development`
+* From the command line rebuild the `/dist` directory with `npm run build`.
+* Add & commit the new `/dist` folder and make the pull request
+  with `development` as the base.
+* Changes must be approved by a peer reviewer
+* Merge changes upon approval
+* Merge `development` into `master`
+* Create a tag for use by npmjs.com
